@@ -38,7 +38,7 @@ namespace Business.Concrete
             //Is kodlari bura yazilmalidir 
             //example: Authentication process 
 
-            if (DateTime.Now.Hour==22)
+            if (DateTime.Now.Hour==2)
             {
                 return new ErrorDataResult<List<Product>>(Messages.MaintenanceTime);
             }
@@ -62,7 +62,7 @@ namespace Business.Concrete
 
         public IDataResult<List<ProductDetailDto>> GetProductsDetails()
         {
-            if (DateTime.Now.Hour == 21)
+            if (DateTime.Now.Hour == 11)
             {
                 return new ErrorDataResult<List<ProductDetailDto>>(Messages.MaintenanceTime);
             }
